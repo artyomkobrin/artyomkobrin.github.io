@@ -224,7 +224,7 @@ var MenuComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  about works!\n</p>\n"
+module.exports = "<pre style=\"font-size: 38px;\">\n  Левонюк Артём Васильевич\n  Факультет математики и информатики,\n  1 курс,\n  группа МДП-МАУТЭС-181\n</pre>\n"
 
 /***/ }),
 
