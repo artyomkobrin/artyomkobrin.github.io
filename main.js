@@ -101,6 +101,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
 /* harmony import */ var _angular_http__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/http */ "./node_modules/@angular/http/fesm5/http.js");
 /* harmony import */ var _system_test_questions_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./system/test/questions.service */ "./src/app/system/test/questions.service.ts");
+/* harmony import */ var _result_result_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./result/result.component */ "./src/app/result/result.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -118,11 +119,13 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var routes = [
     { path: '', component: _system_book_book_component__WEBPACK_IMPORTED_MODULE_4__["BookComponent"] },
     { path: 'book', component: _system_book_book_component__WEBPACK_IMPORTED_MODULE_4__["BookComponent"] },
     { path: 'test', component: _system_test_test_component__WEBPACK_IMPORTED_MODULE_5__["TestComponent"] },
-    { path: 'about', component: _system_about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"] }
+    { path: 'about', component: _system_about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"] },
+    { path: 'result', component: _result_result_component__WEBPACK_IMPORTED_MODULE_11__["ResultComponent"] },
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -134,7 +137,8 @@ var AppModule = /** @class */ (function () {
                 _menu_menu_component__WEBPACK_IMPORTED_MODULE_3__["MenuComponent"],
                 _system_book_book_component__WEBPACK_IMPORTED_MODULE_4__["BookComponent"],
                 _system_test_test_component__WEBPACK_IMPORTED_MODULE_5__["TestComponent"],
-                _system_about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"]
+                _system_about_about_component__WEBPACK_IMPORTED_MODULE_6__["AboutComponent"],
+                _result_result_component__WEBPACK_IMPORTED_MODULE_11__["ResultComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -217,6 +221,71 @@ var MenuComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/result/result.component.html":
+/*!**********************************************!*\
+  !*** ./src/app/result/result.component.html ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div (onChanged)=\"onChanged($event)\" style=\"width: 500px; height: 200px; background: #d8dce6;;display: flex;justify-content: center;align-items: center;flex-direction: column; \">\n  <div style=\"margin: 10px 0; color: green\">ТЕСТ ЗАВЕРШЁН!</div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/result/result.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/result/result.component.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ":host {\n  width: 100%;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  font-size: 30px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvcmVzdWx0L0M6XFxVc2Vyc1xcTHlhdm9uXFxEZXNrdG9wXFx0dFxcbHNhL3NyY1xcYXBwXFxyZXN1bHRcXHJlc3VsdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLFlBQVc7RUFDWCxjQUFhO0VBQ2Isd0JBQXVCO0VBQ3ZCLG9CQUFtQjtFQUNuQixnQkFBZSxFQUNoQiIsImZpbGUiOiJzcmMvYXBwL3Jlc3VsdC9yZXN1bHQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdHtcclxuICB3aWR0aDogMTAwJTtcclxuICBkaXNwbGF5OiBmbGV4O1xyXG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xyXG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XHJcbiAgZm9udC1zaXplOiAzMHB4O1xyXG59XHJcbiJdfQ== */"
+
+/***/ }),
+
+/***/ "./src/app/result/result.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/result/result.component.ts ***!
+  \********************************************/
+/*! exports provided: ResultComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ResultComponent", function() { return ResultComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var ResultComponent = /** @class */ (function () {
+    function ResultComponent() {
+    }
+    ResultComponent.prototype.ngOnInit = function () {
+        this.test = Math.floor(Math.random() * 10);
+        // console.log(Math.floor(Math.random()* 10))
+    };
+    ResultComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-result',
+            template: __webpack_require__(/*! ./result.component.html */ "./src/app/result/result.component.html"),
+            styles: [__webpack_require__(/*! ./result.component.scss */ "./src/app/result/result.component.scss")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], ResultComponent);
+    return ResultComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/system/about/about.component.html":
 /*!***************************************************!*\
   !*** ./src/app/system/about/about.component.html ***!
@@ -235,7 +304,7 @@ module.exports = "<pre style=\"font-size: 38px;\">\n  Левонюк Артём 
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3N5c3RlbS9hYm91dC9hYm91dC5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = ":host {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3lzdGVtL2Fib3V0L0M6XFxVc2Vyc1xcTHlhdm9uXFxEZXNrdG9wXFx0dFxcbHNhL3NyY1xcYXBwXFxzeXN0ZW1cXGFib3V0XFxhYm91dC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNDLGNBQWE7RUFDWix3QkFBdUI7RUFDdkIsb0JBQW1CO0VBQ25CLFlBQVcsRUFDWiIsImZpbGUiOiJzcmMvYXBwL3N5c3RlbS9hYm91dC9hYm91dC5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIjpob3N0IHtcclxuIGRpc3BsYXk6IGZsZXg7XHJcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XHJcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG4iXX0= */"
 
 /***/ }),
 
@@ -374,17 +443,17 @@ var QuestionsService = /** @class */ (function () {
                         checked: false
                     },
                     {
-                        answer: 'a3',
+                        answer: 'это сложная организационно завершенная (структурированная) экономическая система, состоящая из элементов – звеньев, взаимосвязанных в едином процессе управления материальными и сопутствующими им потоками',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a4',
+                        answer: 'функциональный комплекс, обеспечивающий процесс непрерывного целенаправленного подбора соответствующих информационных показателей',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a5',
+                        answer: 'cистема предназначенная для оперативного учета и управления основными бизнес-процессами типографии, анализа результатов производственной деятельности',
                         isTrue: false,
                         checked: false
                     }
@@ -468,17 +537,17 @@ var QuestionsService = /** @class */ (function () {
                         checked: false
                     },
                     {
-                        answer: 'a3',
+                        answer: 'это сложная организационно завершенная (структурированная) экономическая система, состоящая из элементов – звеньев, взаимосвязанных в едином процессе управления материальными и сопутствующими им потоками',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a4',
+                        answer: 'система предназначенная для оперативного учета и управления основными бизнес-процессами типографии, анализа результатов производственной деятельности',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a5',
+                        answer: 'функциональный комплекс, обеспечивающий процесс непрерывного целенаправленного подбора соответствующих информационных показателей',
                         isTrue: false,
                         checked: false
                     }
@@ -515,17 +584,17 @@ var QuestionsService = /** @class */ (function () {
                         checked: false
                     },
                     {
-                        answer: 'a3',
+                        answer: 'для анализа сокращения сроков обработки информации',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a4',
+                        answer: 'сбора, анализа и хранения информации',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a5',
+                        answer: 'для анализа увеличения сроков обработки информации за счёт сокращения объёмов перерабатываемой информации',
                         isTrue: false
                     }
                 ]
@@ -538,17 +607,17 @@ var QuestionsService = /** @class */ (function () {
                         checked: false
                     },
                     {
-                        answer: 'a3',
+                        answer: 'Мощность,быстрота, производительность',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a4',
+                        answer: 'Оперативность, точность, скорость',
                         isTrue: false,
                         checked: false
                     },
                     {
-                        answer: 'a5',
+                        answer: 'бесперебойность, мощность, быстрота',
                         isTrue: false,
                         checked: false
                     }
@@ -621,7 +690,7 @@ var QuestionsService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n\n  <div style=\"display: flex; flex-direction: row; justify-content: space-around\" class=\"timer\" *ngIf=\"startWorkTest\">\n    <div style=\"display: flex; align-items: center\">\n      <label style=\"font-family: fantasy\">время до завершения теста:     </label>\n      <label style=\"font-family: fantasy;margin-left: 20px\" id=\"timer\"></label>\n    </div>\n\n    <div style=\"display: flex; align-items: center\">\n      <button style=\"    background: greenyellow;border: 1px solid gold;border-radius: 20px;width: 200px;height: 30px;color: black;font-family: fantasy;\" (click)=\"testComplite()\">\n        Завершить тест\n      </button>\n    </div>\n\n\n  </div>\n  <div class=\"line\"></div>\n\n  <div class=\"test\">\n    <div [ngSwitch]=\"val\">\n      <div *ngFor=\"let Q of values; index as i\" (click)=\"val = i\">\n        <div *ngSwitchCase=\"i\">\n          <h1>{{Q.question}}</h1>\n            <div *ngFor=\"let answer of Q.answers; index as indAnswer\">\n              <input type=\"radio\" name=\"radioGroup\" id=\"{{answer.answer}}\" (change)=\"currently(Q, answer)\" [ngClass]=\"\" checked = \"{{answer.cheked === true  ? 'checked' : undefined}}\">\n              <label for=\"{{answer.answer}}\">{{answer.answer}}</label>\n              <label>   =>   {{ answer.isTrue }}</label>\n            </div>\n        </div>\n      </div>\n      <div *ngSwitchDefault style=\"align-items: center; justify-content: center;display: flex; flex-direction: column\">\n        <h1 style=\"margin-bottom: 100px; text-align: center; font-size: 36px;\">Информационные системы и технологии. Их классификация в организационном управлении</h1>\n        <button style=\"width: 200px; height: 100px; border: 2px solid black; background: red; border-radius: 50px; font-size: 20px; font-family: fantasy;\" (click)=\"startTest()\"> НАЧАТЬ ТЕСТ</button>\n      </div>\n    </div>\n\n  </div>\n\n\n\n  <div class=\"controls\" *ngIf=\"startWorkTest\">\n\n    <div class=\"line\"></div>\n    <div style=\"display: flex; flex-direction: row; justify-content: center; align-items: center\">\n      <button (click)=\"prevStep()\" [disabled]=\"disPrevStep\"><=</button>\n      <button [ngClass]=\"{grinBack: val === i}\" *ngFor=\"let Q of values; index as i\" (click)=\"stepper(i)\">{{i+1}}</button>\n      <button (click)=\"nextStep()\" [disabled]=\"disNextStep\">=></button>\n    </div>\n\n\n  </div>\n</div>\n"
+module.exports = "<div class=\"container\">\n\n  <div style=\"display: flex; flex-direction: row; justify-content: space-around\" class=\"timer\" *ngIf=\"startWorkTest\">\n    <div style=\"display: flex; align-items: center\">\n      <label style=\"font-family: fantasy\">время до завершения теста:     </label>\n      <label style=\"font-family: fantasy;margin-left: 20px\" id=\"timer\"></label>\n    </div>\n\n    <div style=\"display: flex; align-items: center\">\n      <button style=\"    background: greenyellow;border: 1px solid gold;border-radius: 20px;width: 200px;height: 30px;color: black;font-family: fantasy;\" (click)=\"testComplite()\" routerLinkActive=\"active\" [routerLink]=\"['/result']\">Завершить тест</button>\n    </div>\n\n\n  </div>\n  <div class=\"line\"></div>\n\n  <div class=\"test\">\n    <div [ngSwitch]=\"val\">\n      <div *ngFor=\"let Q of values; index as i\" (click)=\"val = i\">\n        <div *ngSwitchCase=\"i\">\n          <h1>{{Q.question}}</h1>\n            <div *ngFor=\"let answer of Q.answers; index as indAnswer\" style=\"margin-bottom: 15px\">\n              <input type=\"radio\" name=\"radioGroup\" id=\"{{answer.answer}}\" (change)=\"currently(Q, answer)\" [ngClass]=\"\" checked = \"{{answer.cheked === true  ? 'checked' : undefined}}\">\n              <label for=\"{{answer.answer}}\">{{answer.answer}}</label>\n              <label *ngIf=\"false\">   =>   {{ answer.isTrue }}</label>\n            </div>\n        </div>\n      </div>\n      <div *ngSwitchDefault style=\"align-items: center; justify-content: center;display: flex; flex-direction: column\">\n        <h1 style=\"margin-bottom: 100px; text-align: center; font-size: 36px;\">Информационные системы и технологии. Их классификация в организационном управлении</h1>\n        <button style=\"width: 200px; height: 100px; border: 2px solid black; background: red; border-radius: 50px; font-size: 20px; font-family: fantasy;\" (click)=\"startTest()\"> НАЧАТЬ ТЕСТ</button>\n      </div>\n    </div>\n\n  </div>\n\n\n\n  <div class=\"controls\" *ngIf=\"startWorkTest\">\n\n    <div class=\"line\"></div>\n    <div style=\"display: flex; flex-direction: row; justify-content: center; align-items: center\">\n      <button (click)=\"prevStep()\" [disabled]=\"disPrevStep\" STYLE=\"margin: 0 10px\"><=</button>\n      <button [ngClass]=\"{grinBack: val === i}\" *ngFor=\"let Q of values; index as i\" (click)=\"stepper(i)\" STYLE=\"margin: 0 10px\">{{i+1}}</button>\n      <button (click)=\"nextStep()\" [disabled]=\"disNextStep\" STYLE=\"margin: 0 10px\">=></button>\n    </div>\n\n\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -632,7 +701,7 @@ module.exports = "<div class=\"container\">\n\n  <div style=\"display: flex; fle
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  flex-direction: column; }\n  :host > div.container {\n    margin: 10%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    background: #F3F3F3;\n    border-radius: 2rem;\n    border: 0.2rem solid black;\n    padding: 20px; }\n  :host > div.container > div.timer {\n      flex: 0 0 50px; }\n  :host > div.container > div.test {\n      flex: 1; }\n  :host > div.container > div.controls {\n      flex: 0 0 50px; }\n  :host > div.container div.line {\n      background: gray;\n      height: 2px;\n      margin: 2% 10%; }\n  :host .grinBack {\n    background: orange; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3lzdGVtL3Rlc3QvQzpcXFVzZXJzXFxMeWF2b25cXERlc2t0b3BcXHR0XFxsc2Evc3JjXFxhcHBcXHN5c3RlbVxcdGVzdFxcdGVzdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWE7RUFDYixZQUFXO0VBQ1gsYUFBWTtFQUNaLHVCQUFzQixFQWtDdkI7RUF0Q0Q7SUFPSSxZQUFXO0lBQ1gsUUFBTztJQUNQLGNBQWE7SUFDYix1QkFBc0I7SUFDdEIsb0JBQW1CO0lBQ25CLG9CQUFtQjtJQUNuQiwyQkFBMEI7SUFDMUIsY0FBYSxFQW1CZDtFQWpDSDtNQWlCTSxlQUFjLEVBQ2Y7RUFsQkw7TUFxQk0sUUFBTyxFQUNSO0VBdEJMO01BeUJNLGVBQWMsRUFDZjtFQTFCTDtNQTZCTSxpQkFBZ0I7TUFDaEIsWUFBVztNQUNYLGVBQWMsRUFDZjtFQWhDTDtJQW9DSSxtQkFBa0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9zeXN0ZW0vdGVzdC90ZXN0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcblxyXG4gID4gZGl2LmNvbnRhaW5lciB7XHJcbiAgICBtYXJnaW46IDEwJTtcclxuICAgIGZsZXg6IDE7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcclxuICAgIGJhY2tncm91bmQ6ICNGM0YzRjM7XHJcbiAgICBib3JkZXItcmFkaXVzOiAycmVtO1xyXG4gICAgYm9yZGVyOiAwLjJyZW0gc29saWQgYmxhY2s7XHJcbiAgICBwYWRkaW5nOiAyMHB4O1xyXG5cclxuICAgID4gZGl2LnRpbWVyIHtcclxuICAgICAgZmxleDogMCAwIDUwcHg7XHJcbiAgICB9XHJcblxyXG4gICAgPiBkaXYudGVzdCB7XHJcbiAgICAgIGZsZXg6IDE7XHJcbiAgICB9XHJcblxyXG4gICAgPiBkaXYuY29udHJvbHMge1xyXG4gICAgICBmbGV4OiAwIDAgNTBweDtcclxuICAgIH1cclxuXHJcbiAgICBkaXYubGluZSB7XHJcbiAgICAgIGJhY2tncm91bmQ6IGdyYXk7XHJcbiAgICAgIGhlaWdodDogMnB4O1xyXG4gICAgICBtYXJnaW46IDIlIDEwJTtcclxuICAgIH1cclxuICB9XHJcblxyXG4gIC5ncmluQmFjayB7XHJcbiAgICBiYWNrZ3JvdW5kOiBvcmFuZ2U7XHJcbiAgfVxyXG59XHJcbiJdfQ== */"
+module.exports = ":host {\n  display: flex;\n  width: 100%;\n  height: 100%;\n  flex-direction: column; }\n  :host > div.container {\n    margin: 5%;\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    background: #F3F3F3;\n    border-radius: 2rem;\n    border: 0.2rem solid black;\n    padding: 20px; }\n  :host > div.container > div.timer {\n      flex: 0 0 50px; }\n  :host > div.container > div.test {\n      flex: 1; }\n  :host > div.container > div.controls {\n      flex: 0 0 50px; }\n  :host > div.container div.line {\n      background: gray;\n      height: 2px;\n      margin: 2% 10%; }\n  :host .grinBack {\n    background: orange; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvc3lzdGVtL3Rlc3QvQzpcXFVzZXJzXFxMeWF2b25cXERlc2t0b3BcXHR0XFxsc2Evc3JjXFxhcHBcXHN5c3RlbVxcdGVzdFxcdGVzdC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLGNBQWE7RUFDYixZQUFXO0VBQ1gsYUFBWTtFQUNaLHVCQUFzQixFQWtDdkI7RUF0Q0Q7SUFPSSxXQUFVO0lBQ1YsUUFBTztJQUNQLGNBQWE7SUFDYix1QkFBc0I7SUFDdEIsb0JBQW1CO0lBQ25CLG9CQUFtQjtJQUNuQiwyQkFBMEI7SUFDMUIsY0FBYSxFQW1CZDtFQWpDSDtNQWlCTSxlQUFjLEVBQ2Y7RUFsQkw7TUFxQk0sUUFBTyxFQUNSO0VBdEJMO01BeUJNLGVBQWMsRUFDZjtFQTFCTDtNQTZCTSxpQkFBZ0I7TUFDaEIsWUFBVztNQUNYLGVBQWMsRUFDZjtFQWhDTDtJQW9DSSxtQkFBa0IsRUFDbkIiLCJmaWxlIjoic3JjL2FwcC9zeXN0ZW0vdGVzdC90ZXN0LmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiOmhvc3Qge1xyXG4gIGRpc3BsYXk6IGZsZXg7XHJcbiAgd2lkdGg6IDEwMCU7XHJcbiAgaGVpZ2h0OiAxMDAlO1xyXG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XHJcblxyXG4gID4gZGl2LmNvbnRhaW5lciB7XHJcbiAgICBtYXJnaW46IDUlO1xyXG4gICAgZmxleDogMTtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gICAgYmFja2dyb3VuZDogI0YzRjNGMztcclxuICAgIGJvcmRlci1yYWRpdXM6IDJyZW07XHJcbiAgICBib3JkZXI6IDAuMnJlbSBzb2xpZCBibGFjaztcclxuICAgIHBhZGRpbmc6IDIwcHg7XHJcblxyXG4gICAgPiBkaXYudGltZXIge1xyXG4gICAgICBmbGV4OiAwIDAgNTBweDtcclxuICAgIH1cclxuXHJcbiAgICA+IGRpdi50ZXN0IHtcclxuICAgICAgZmxleDogMTtcclxuICAgIH1cclxuXHJcbiAgICA+IGRpdi5jb250cm9scyB7XHJcbiAgICAgIGZsZXg6IDAgMCA1MHB4O1xyXG4gICAgfVxyXG5cclxuICAgIGRpdi5saW5lIHtcclxuICAgICAgYmFja2dyb3VuZDogZ3JheTtcclxuICAgICAgaGVpZ2h0OiAycHg7XHJcbiAgICAgIG1hcmdpbjogMiUgMTAlO1xyXG4gICAgfVxyXG4gIH1cclxuXHJcbiAgLmdyaW5CYWNrIHtcclxuICAgIGJhY2tncm91bmQ6IG9yYW5nZTtcclxuICB9XHJcbn1cclxuIl19 */"
 
 /***/ }),
 
@@ -709,7 +778,7 @@ var TestComponent = /** @class */ (function () {
                 }
             });
         });
-        alert('resuld: ' + count);
+        alert('Ваш результат: ' + count);
     };
     TestComponent.prototype.currently = function (a, b) {
         var _this = this;
@@ -748,7 +817,7 @@ var TestComponent = /** @class */ (function () {
     };
     TestComponent.prototype.timer = function () {
         var _this = this;
-        var timeOut = 70;
+        var timeOut = 900;
         var min = 0;
         var sec = 0;
         var timer = setInterval(function () {
